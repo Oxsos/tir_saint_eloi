@@ -17,4 +17,3 @@ if (isset($_SESSION['admin']) AND !empty($_SESSION['admin'])) {
 }else {
   header('location:index.php');
 }
-coucou
