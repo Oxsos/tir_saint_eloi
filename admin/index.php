@@ -22,23 +22,23 @@
 <//---------------------------------Articles-------------------------->
     <?php
     $req = $bdd->query('SELECT * FROM articles');
-    $articles = $req->fetchAll();
+    $article = $req->fetchAll();
 
-    foreach ($articles as $articles):   ?>
+    foreach ($article as $article):   ?>
 
     <div class="article">
       <div class="img-article">
         <img src="http://via.placeholder.com/350x150">
-        <span class="card-title"><?= $articles['name']?></span>
+        <span class="card-title"><?= $article['name']?></span>
       </div>
       <div class="content-article">
-        <?= $articles['content'] ?>
+        <?= $article['content'] ?>
         <br>
         <br>
-        <?= $articles['Autor'] ?>
+        <?= $article['Autor'] ?>
       </div>
       <div class="link-article">
-        <a href="gestion_article.php?id=<?= $articles['id'] ?>">Voir l'article / le modifier</a>
+        <a href="gestion_article.php?id=<?= $article['id'] ?>">Voir l'article / le modifier</a>
       </div>
     </div>
 

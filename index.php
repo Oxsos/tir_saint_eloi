@@ -14,20 +14,20 @@
     <?php
       require_once "inc/connect.php";
       $req = $bdd->query('SELECT * FROM articles');
-      $articles = $req->fetchAll();
+      $article = $req->fetchAll();
 
-      foreach ($articles as $articles):     ?>
+      foreach ($article as $article):     ?>
 
       <div class="article">
         <div class="img-article">
           <img src="http://via.placeholder.com/350x150">
-          <span class="card-title"><?= $articles['name']?></span>
+          <span class="card-title"><?= $article['name']?></span>
         </div>
         <div class="content-article">
-          <?= $articles['content'] ?><br><br><?= $articles['Autor'] ?>
+          <?= $article['content'] ?><br><br><?= $article['Autor'] ?>
         </div>
         <div class="link-article">
-          <a href="page_article.php?id=<?= $articles['id'] ?>">Voir l'article en entier</a>
+          <a href="page_article.php?id=<?= $article['id'] ?>">Voir l'article en entier</a>
         </div>
       </div>
 
