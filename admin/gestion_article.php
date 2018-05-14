@@ -30,8 +30,8 @@
 <//----------------------------------------------------Modification Articles------------------------------------------------------->
 
 <div class="sup-article">
-  <a href="delete_article.php?id=<?= $articles->id ?>">Supprimer</a>
-  <a href="modif_article.php?id=<?= $articles->id ?>">Modifier</a>
+  <a href="delete_article.php?id=<?= $article->id ?>">Supprimer</a>
+  <a href="modif_article.php?id=<?= $article->id ?>">Modifier</a>
   <a href="index.php">Retour à la page principale</a>
 </div>
 
