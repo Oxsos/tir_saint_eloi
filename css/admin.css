@@ -34,4 +34,32 @@ li a:hover {
     background-color: #111;
 }
 
-/*---------------------------------Navbar-----------------------------*/
+/*---------------------------------Articles-----------------------------*/
+.article-cont{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height:auto;
+}
+
+.article{
+  align-items: center;
+  width: 20%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.img-article{
+  width: 100%;
+  height: auto;
+}
+.content-article{
+  width: 100%;
+  height: auto;
+
+}

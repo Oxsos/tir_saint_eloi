@@ -20,39 +20,50 @@
     ?>
 <//---------------------------------Navbar-------------------------->
 
-<ul>
- <li><a href="index.php">Acceuil Administration</a></li>
- <li><a href="acc_page.php">Gestion des pages</a></li>
- <li><a href="deconnect.php">Déconnexion</a> </li>
-</ul>
+    <ul>
+     <li><a href="index.php">Acceuil Administration</a></li>
+     <li><a href="acc_page.php">Gestion des pages</a></li>
+     <li><a href="deconnect.php">Déconnexion</a> </li>
+    </ul>
+
+    <h2><center>Bienvenue <?php echo $_SESSION['admin']; ?></center></h2>
 
 <//---------------------------------Articles-------------------------->
+    <a href="creat_article.php">Ajouter un article</a><br>
+
+    <div class="article-cont">
 
     <?php
-    $req = $bdd->query('SELECT * FROM articles');
+    $req = $bdd->query('SELECT * FROM articles ORDER BY id DESC LIMIT 30');
     $article = $req->fetchAll();
 
     foreach ($article as $article):   ?>
 
-    <div class="article">
-      <div class="img-article">
-        <img src="http://via.placeholder.com/350x150">
-        <span class="card-title"><?= $article['name']?></span>
+      <div class="article">
+
+        <div class="img-article">
+          <img src="http://via.placeholder.com/350x150"><br>
+          <h3><?= $article['name']?></h3>
+        </div>
+
+        <div class="content-article">
+          <?php echo substr($article['content'], 0, 400);
+           ?>
+          <br>
+          Par: <?= $article['Autor'] ?>
+        </div>
+
+        <div class="link-article">
+          <a href="gestion_article.php?id=<?= $article['id'] ?>">Voir l'article / le modifier</a>
+        </div>
       </div>
-      <div class="content-article">
-        <?= $article['content'] ?>
-        <br>
-        <br>
-        <?= $article['Autor'] ?>
-      </div>
-      <div class="link-article">
-        <a href="gestion_article.php?id=<?= $article['id'] ?>">Voir l'article / le modifier</a>
-      </div>
+    <?php endforeach ?>
     </div>
 
-    <?php endforeach ?>
-<//---------------------------------Affichage HTML-------------------------->
-    <h3>Bienvenue <?php echo $_SESSION['admin']; ?></h3>
+
+
+<//----------------------------------------------------------->
+
 
   </body>
 
