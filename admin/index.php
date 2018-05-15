@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset utf-8">
     <title>Admin Tir saint Eloi</title>
+    <link rel="stylesheet" href="../css/admin.css">
   </head>
 
 
@@ -17,9 +18,16 @@
         header('location:login.php');
       }
     ?>
+<//---------------------------------Navbar-------------------------->
 
+<ul>
+ <li><a href="index.php">Acceuil Administration</a></li>
+ <li><a href="acc_page.php">Gestion des pages</a></li>
+ <li><a href="deconnect.php">Déconnexion</a> </li>
+</ul>
 
 <//---------------------------------Articles-------------------------->
+
     <?php
     $req = $bdd->query('SELECT * FROM articles');
     $article = $req->fetchAll();
