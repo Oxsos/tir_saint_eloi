@@ -21,10 +21,11 @@
       if (!empty($_POST['name']) AND !empty($_POST['content']) AND !empty($_POST['Autor'])) {
         $req = $bdd->prepare('UPDATE articles SET name = :name, content = :content, Autor = :Autor WHERE id = :id');
         $req->execute([
+          'id' => $_GET['id'],
           'name' => $_POST['name'],
           'content' => $_POST['content'],
-          'Autor' => $_POST['Autor'],
-          'id' => $_GET['id']
+          'Autor' => $_POST['Autor']
+
         ]);
         $_SESSION['flash']['success'] = 'Article modifier!';
       }else {

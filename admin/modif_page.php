@@ -19,11 +19,12 @@
 
     if (isset($_POST) AND !empty($_POST)) {
       if (!empty($_POST['nom']) AND !empty($_POST['content'])) {
-        $req = $bdd->prepare('UPDATE page SET nom = :nom, content = :content WHERE id = :id');
+        $req = $bdd->prepare('UPDATE page SET nom = :nom, content = :content WHERE `page`.id = :id');
         $req->execute([
+          'id' => $_GET['id'],
           'nom' => $_POST['nom'],
-          'content' => $_POST['content'],
-          'id' => $_GET['id']
+          'content' => $_POST['content']
+
         ]);
         $_SESSION['flash']['success'] = 'page modifier!';
       }else {
@@ -46,10 +47,10 @@
       ?>
       <form method="post">
         <h2>Nom de la page:</h2>
-        <input type="text" nom="nom" value="<?= $page->nom ?>">
+        <input type="text" name="nom" value="<?= $page->nom ?>">
 
         <h2>Contenu de la page:</h2>
-        <textarea cols="80" class="ckeditor" id="editeur" nom="content" rows="10"><?= $page->content ?></textarea>
+        <textarea cols="80" class="ckeditor" id="editeur" name="content" rows="10"><?= $page->content ?></textarea>
         <button>Modifier</button>
       </form>
     </div>
