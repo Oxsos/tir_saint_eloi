@@ -13,7 +13,7 @@
   <body>
     <?php require_once '../inc/connect.php' ?>
     <div class="container">
-      <h3>Se connecter :</h3>
+      
 
 <//---------------------------------connection de l'administation---------------->
         <?php
