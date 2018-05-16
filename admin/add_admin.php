@@ -1,7 +1,7 @@
-<?php
-session_start();
 
-require_once "inc/header.php";
+<?php require_once"inc/header.php" ?>
+
+<?php require_once "inc/header.php";
 
 require_once "../inc/connect.php";
 if (!$_SESSION['admin']) {

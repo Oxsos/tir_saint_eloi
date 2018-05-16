@@ -7,7 +7,7 @@
     require_once '../inc/connect.php';
     require_once '../inc/fonction.php';
 
-    $article = getArticle($bdd,1, $_GET['id']);
+    $page = getPage($bdd,1, $_GET['id']);
 
     if (!isset($_GET['id'])) {
       header('location:index.php');
@@ -18,15 +18,14 @@
     }
 
     if (isset($_POST) AND !empty($_POST)) {
-      if (!empty($_POST['name']) AND !empty($_POST['content']) AND !empty($_POST['Autor'])) {
-        $req = $bdd->prepare('UPDATE articles SET name = :name, content = :content, Autor = :Autor WHERE id = :id');
+      if (!empty($_POST['nom']) AND !empty($_POST['content'])) {
+        $req = $bdd->prepare('UPDATE page SET nom = :nom, content = :content WHERE id = :id');
         $req->execute([
-          'name' => $_POST['name'],
+          'nom' => $_POST['nom'],
           'content' => $_POST['content'],
-          'Autor' => $_POST['Autor'],
           'id' => $_GET['id']
         ]);
-        $_SESSION['flash']['success'] = 'Article modifier!';
+        $_SESSION['flash']['success'] = 'page modifier!';
       }else {
         $_SESSION['flash']['error'] = 'Champs manquants!';
       }
@@ -35,8 +34,8 @@
     ?>
 
 
-    <div class="modif-article">
-      <h1>Modifier l'article: <?= $article->name ?></h1>
+    <div class="modif-page">
+      <h1>Modifier la page: <?= $page->nom ?></h1>
       <?php
         if (isset($_SESSION['flash']['success'])) {
           echo "<div class='success'>".$_SESSION['flash']['success']."</div>";
@@ -46,19 +45,18 @@
         }
       ?>
       <form method="post">
-        <h2>Nom de l'article:</h2>
-        <input type="text" name="name" value="<?= $article->name ?>">
-        <h2>Auteur de l'article:</h2>
-        <input type="text" name="Autor" value="<?= $article->Autor ?>">
-        <h2>Contenu de l'article:</h2>
-        <textarea cols="80" class="ckeditor" id="editeur" name="content" rows="10"><?= $article->content ?></textarea>
+        <h2>Nom de la page:</h2>
+        <input type="text" nom="nom" value="<?= $page->nom ?>">
+
+        <h2>Contenu de la page:</h2>
+        <textarea cols="80" class="ckeditor" id="editeur" nom="content" rows="10"><?= $page->content ?></textarea>
         <button>Modifier</button>
       </form>
     </div>
 <//----------------------------------------------------Modification Articles------------------------------------------------------->
 
-<div class="sup-article">
-  <a href="index.php">Retour à la page précédente</a>
+<div class="sup-page">
+  <a href="acc_page.php">Retour à la page précédente</a>
 </div>
 
 <//----------------------------------------------------footer------------------------------------------------------->

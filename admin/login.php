@@ -22,12 +22,11 @@
           $req = $bdd->prepare('SELECT * FROM admin WHERE (pseudo = :pseudo OR email = :pseudo)');
           $req->execute(['pseudo' => $_POST['pseudo']]);
           //on récupère l'utilisateur
-          $user = $req->fetch();
-            if(password_verify($_POST['pass'], $user->$pass)){
+          $user = $req->fetch(PDO::FETCH_OBJ);
+            if(password_verify($_POST['pass'], $user->pass)){
               session_start();
               $_SESSION['admin'] = $user;
-              $_SESSION['flash']['success'] = 'Vous êtes bien connecté.';
-          header('location: account.php');
+          header('location: index.php');
           exit();
         }else{
           $_SESSION['flash']['danger'] = 'identifiant ou mot de passe incorrecte.';
@@ -38,7 +37,7 @@
 
 
 
-<//--------------------------------- formulaire de connection de l'administation---------------->
+<//--------------------------------- formulaire de connection à l'administation---------------->
       <h1>Se connecter</h1>
 
 

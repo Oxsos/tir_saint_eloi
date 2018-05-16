@@ -1,14 +1,3 @@
-<?php session_start() ?>
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="content-type" content="text/html; charset utf-8">
-    <title>Tir saint eloi</title>
-  </head>
-  <body>
-<//----------------------------------------------------header------------------------------------------------------->
-
 
     <?php require_once"inc/header.php" ?>
 

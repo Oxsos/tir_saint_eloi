@@ -14,4 +14,18 @@ function getArticle($bdd, $nb = null, $id = null){
   return $article;
 }
 
- ?>
+
+
+ function getPage($bdd, $nb = null, $id = null){
+   if ($nb AND !$id) {
+     $req = $bdd->query('SELECT * FROM page LIMIT'.$nb);
+     $page = $req->fetchAll();
+   }elseif ($id) {
+     $req = $bdd->query('SELECT * FROM page WHERE id ='.$id);
+     $page = $req->fetchObject();
+   }else {
+     $req = $bdd->query('SELECT * FROM page');
+     $page = $req->fetchAll();
+   }
+   return $page;
+ }
