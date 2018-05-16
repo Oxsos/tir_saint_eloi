@@ -6,10 +6,11 @@
     <meta http-equiv="content-type" content="text/html; charset utf-8">
     <title>Tir saint eloi</title>
   </head>
-
+  <body>
 <//----------------------------------------------------header------------------------------------------------------->
 
-  <body>
+
+    <?php require_once"inc/header.php" ?>
 
 <//----------------------------------------------------Articles------------------------------------------------------->
 

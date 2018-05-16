@@ -6,11 +6,13 @@
     <meta http-equiv="content-type" content="text/html; charset utf-8">
     <title>Tir saint eloi</title>
     <script src="../inc/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="../css/admin.css">
   </head>
-
+  <body>
 <//----------------------------------------------------header------------------------------------------------------->
 
-  <body>
+
+    <?php require_once"inc/header.php" ?>
 
 <//----------------------------------------------------Articles------------------------------------------------------->
 

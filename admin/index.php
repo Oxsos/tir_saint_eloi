@@ -20,11 +20,7 @@
     ?>
 <//---------------------------------Navbar-------------------------->
 
-    <ul>
-     <li><a href="index.php">Acceuil Administration</a></li>
-     <li><a href="acc_page.php">Gestion des pages</a></li>
-     <li><a href="deconnect.php">Déconnexion</a> </li>
-    </ul>
+    <?php require_once"inc/header.php" ?>
 
     <h2><center>Bienvenue <?php echo $_SESSION['admin']; ?></center></h2>
 
@@ -34,7 +30,7 @@
     <div class="article-cont">
 
     <?php
-    $req = $bdd->query('SELECT * FROM articles ORDER BY id DESC LIMIT 30');
+    $req = $bdd->query('SELECT * FROM articles ORDER BY id DESC');
     $article = $req->fetchAll();
 
     foreach ($article as $article):   ?>

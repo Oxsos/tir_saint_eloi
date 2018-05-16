@@ -16,40 +16,46 @@
       <h3>Se connecter :</h3>
 
 <//---------------------------------connection de l'administation---------------->
-      <?php
-        if (isset($_POST) AND !empty($_POST)) {
-          if (!empty(htmlspecialchars($_POST['username'])) AND !empty(htmlspecialchars($_POST['password']))) {
-            $req = $bdd->prepare('SELECT * FROM admin WHERE pseudo = :pseudo AND pass = :pass');
-            $req->execute([
-              'pseudo' => $_POST['username'],
-              'pass' => $_POST['password']
-            ]);
-            $user = $req->fetch();
-            if ($user) {
-              $_SESSION['admin'] = $_POST['username'];
-              header('location:index.php');
-            }
-            else {
-              $error = 'Identifiants incorrects';
-            }
-          }
-          else {
-            $error = 'Veuillez remplir tous les champs!';
-          }
+        <?php
+        if(!empty($_POST) && !empty($_POST['pseudo']) && !empty($_POST['pass'])) {
+          require_once '../inc/connect.php';
+          $req = $bdd->prepare('SELECT * FROM admin WHERE (pseudo = :pseudo OR email = :pseudo)');
+          $req->execute(['pseudo' => $_POST['pseudo']]);
+          //on récupère l'utilisateur
+          $user = $req->fetch();
+            if(password_verify($_POST['pass'], $user->$pass)){
+              session_start();
+              $_SESSION['admin'] = $user;
+              $_SESSION['flash']['success'] = 'Vous êtes bien connecté.';
+          header('location: account.php');
+          exit();
+        }else{
+          $_SESSION['flash']['danger'] = 'identifiant ou mot de passe incorrecte.';
         }
-        if (isset($error)) {
-          echo '<div class="error">'. $error .'</div>';
         }
-        $req = $bdd->query('SELECT * FROM admin');
-        $user = $req->fetch();
-      ?>
+
+        ?>
+
 
 
 <//--------------------------------- formulaire de connection de l'administation---------------->
-      <form action="" method="post">
-        Pseudo :<input type="text" name="username"><br>
-        Mot de passe :<input type="password" name="password"><br>
-        <input type="submit" value="Valider"/>
+      <h1>Se connecter</h1>
+
+
+      <form action="" method="POST">
+
+        <div class="form-group">
+            <label for="">Pseudo ou email</label>
+            <input class="form-control" type="text" name="pseudo" required>
+          </div>
+
+          <div class="form-group">
+            <label for="">Mot de passe </label>
+              <input class="form-control" type="pass" name="pass" required>
+          </div>
+
+
+      <button type="submit" class="btn btn-primary"> Se connecter </button>
       </form>
 
     </div>
