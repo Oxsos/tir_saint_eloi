@@ -52,7 +52,7 @@
         <h2>Auteur de l'article:</h2>
         <input type="text" name="Autor" value="<?= $article->Autor ?>">
         <h2>Contenu de l'article:</h2>
-        <textarea cols="80" class="ckeditor" id="editeur" name="content" rows="10"><?= $article->content ?></textarea>
+        <textarea id="myTextarea" name="content"><?= $article->content ?></textarea>
         <button>Modifier</button>
       </form>
     </div>
