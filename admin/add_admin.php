@@ -37,7 +37,7 @@ if (!empty($_POST)) {
     $req = $bdd->prepare("INSERT INTO admin SET pseudo = ?, pass = ?, email = ?");
     $pass = password_hash($_POST['pass'], PASSWORD_BCRYPT);
     $req->execute([$_POST['pseudo'], $pass, $_POST['email']]);
-
+    header('location:admin.php');
   }
 
 

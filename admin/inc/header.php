@@ -42,10 +42,12 @@
 <//---------------------------------Navbar-------------------------->
 
     <nav>
-      <ul>
-       <li><a href="index.php">Acceuil Administration</a></li>
-       <li><a href="add_admin.php">Ajouter un Admin</a></li>
-       <li><a href="acc_page.php">Gestion des pages</a></li>
-       <li><a href="deconnect.php">Déconnexion</a> </li>
+      <ul class="ul-navbar">
+       <li class="li-navbar"><a href="index.php">Acceuil Administration</a></li>
+
+       <li class="li-navbar"><a href="acc_page.php">Gestion des pages</a></li>
+       <li class="li-navbar"><a href="admin.php">Administateurs</a></li>
+       <li class="li-navbar"><a href="deconnect.php">Déconnexion</a> </li>
+
       </ul>
     </nav>
