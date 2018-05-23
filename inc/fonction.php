@@ -29,3 +29,17 @@ function getArticle($bdd, $nb = null, $id = null){
    }
    return $page;
  }
+
+ function getAdmin($bdd, $nb = null, $id = null){
+   if ($nb AND !$id) {
+     $req = $bdd->query('SELECT * FROM admin LIMIT'.$nb);
+     $page = $req->fetchAll();
+   }elseif ($id) {
+     $req = $bdd->query('SELECT * FROM admin WHERE id ='.$id);
+     $page = $req->fetchObject();
+   }else {
+     $req = $bdd->query('SELECT * FROM admin');
+     $page = $req->fetchAll();
+   }
+   return $admin;
+ }

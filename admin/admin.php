@@ -17,8 +17,8 @@ foreach ($admin as $admin):   ?>
       <li>email: <?= $admin['email'] ?></li>
 
       <?php
-      if ($_SESSION['admin']->id == 12) {?>
-        <li><a href="supp_admin.php?id=<?= $admin->id ?>">Supprimer</a></li>
+      if ($_SESSION['admin']->id == 12 OR $_SESSION['admin']->id == 11) {?>
+        <li><a href="supp_admin.php?id=<?= $admin['id'] ?>">Supprimer</a></li>
       <?php } ?>
 
 
