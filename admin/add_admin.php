@@ -89,3 +89,8 @@ if (!empty($_POST)) {
 
   <button type="submit" class="btn btn-primary"> S'inscrire </button>
 </form>
+
+
+<//----------------------------------------------------footer------------------------------------------------------->
+
+<?php require_once"inc/footer.php" ?>

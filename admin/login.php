@@ -13,7 +13,7 @@
   <body>
     <?php require_once '../inc/connect.php' ?>
     <div class="container">
-      
+
 
 <//---------------------------------connection de l'administation---------------->
         <?php
@@ -50,7 +50,7 @@
 
           <div class="form-group">
             <label for="">Mot de passe </label>
-              <input class="form-control" type="pass" name="pass" required>
+              <input class="form-control" type="password" name="pass" required>
           </div>
 
 

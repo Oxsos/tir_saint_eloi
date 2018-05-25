@@ -41,13 +41,13 @@ html, body{
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 10%;
-  width: 100%;
+  width: 90%;
   height:auto;
 }
 
 .article{
   align-items: center;
-  width: 20%;
+  width: 30%;
   height: auto;
   display: flex;
   flex-direction: column;

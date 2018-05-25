@@ -44,17 +44,8 @@
         <h2>Auteur de l'article:</h2>
         <input type="text" name="Autor">
 
-        <h2>Photos:</h2>
-        <label for="mon_fichier">Fichier (tous formats | max. 1 Mo) :</label><br />
-        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-        <input type="file" name="mon_fichier" id="mon_fichier" /><br />
-        <label for="titre">Titre du fichier (max. 50 caractères) :</label><br />
-        <input type="text" name="titre" value="Titre du fichier" id="titre" /><br />
-        <label for="description">Description de votre fichier (max. 255 caractères) :</label><br />
-        <textarea name="description" id="description"></textarea><br />
-
         <h2>Contenu de l'article:</h2>
-        <textarea cols="80" class="ckeditor" id="editeur" name="content" rows="10"></textarea>
+        <textarea id="myTextarea" name="content"></textarea>
         <button>Ajouter l'article</button>
       </form>
     </div>
@@ -64,8 +55,8 @@
   <a href="index.php">Retour à la page précédente</a>
 </div>
 
+
+
 <//----------------------------------------------------footer------------------------------------------------------->
 
-
-   </body>
-</html>
+<?php require_once"inc/footer.php" ?>

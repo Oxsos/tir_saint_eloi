@@ -1,7 +1,7 @@
 
-    <?php require_once"inc/header.php" ?>
+<?php require_once"inc/header.php" ?>
 
-<//----------------------------------------------------Articles------------------------------------------------------->
+<//----------------------------------------------------admin------------------------------------------------------->
 
 <div class="admin-cont">
 
@@ -27,15 +27,12 @@ foreach ($admin as $admin):   ?>
 <?php endforeach ?>
 </div>
 
-<//----------------------------------------------------Modification Articles------------------------------------------------------->
+<//----------------------------------------------------Modification admin------------------------------------------------------->
 
 <div class="sup-article">
   <a href="add_admin.php">Ajouter un Admin</a><br>
-  <center> <a href="index.php">Retour à la page principale</a></center>
+
 </div>
 
-<//----------------------------------------------------footer------------------------------------------------------->
 
-
-   </body>
-</html>
+<?php require_once"inc/footer.php" ?>

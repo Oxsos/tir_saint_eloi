@@ -56,14 +56,9 @@
         <button>Modifier</button>
       </form>
     </div>
-<//----------------------------------------------------Modification Articles------------------------------------------------------->
 
-<div class="sup-article">
-  <a href="index.php">Retour à la page précédente</a>
-</div>
+
 
 <//----------------------------------------------------footer------------------------------------------------------->
 
-
-   </body>
-</html>
+<?php require_once"inc/footer.php" ?>

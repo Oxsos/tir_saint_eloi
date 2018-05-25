@@ -57,7 +57,7 @@
 <//----------------------------------------------------Modification Articles------------------------------------------------------->
 
 <div class="sup-page">
-  <a href="acc_page.php">Retour à la page précédente</a>
+  <center><a href="acc_page.php">Retour à la page précédente</a></center>
 </div>
 
 <//----------------------------------------------------footer------------------------------------------------------->
