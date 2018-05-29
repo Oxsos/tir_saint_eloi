@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset utf-8">
     <link rel="stylesheet" href="css/master.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Anton|Raleway');
+    </style>
     <title>Tir saint eloi</title>
   </head>
 
