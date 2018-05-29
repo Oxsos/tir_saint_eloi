@@ -19,7 +19,7 @@
           'content' => $_POST['content'],
           'Autor' => $_POST['Autor'],
         ]);
-        $_SESSION['flash']['success'] = 'Article créer!';
+        $_SESSION['flash']['success'] = 'Article créé!';
       }else {
         $_SESSION['flash']['error'] = 'Champs manquants!';
       }
@@ -45,7 +45,7 @@
         <input type="text" name="Autor">
 
         <h2>Contenu de l'article:</h2>
-        <textarea id="myTextarea" name="content"></textarea>
+        <textarea id="newsContenu" name="content" class="CKeditor"></textarea>
         <button>Ajouter l'article</button>
       </form>
     </div>

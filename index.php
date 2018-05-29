@@ -1,17 +1,50 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="content-type" content="text/html; charset utf-8">
-    <title>Tir saint eloi</title>
-  </head>
+<?php require_once"inc/header.php" ?>
 
-<//----------------------------------------------------header------------------------------------------------------->
-  <?php require_once "inc/connect.php"; ?>
-  <body>
+<//----------------------------------------------------CONTENT------------------------------------------------------->
 
-<//----------------------------------------------------Articles------------------------------------------------------->
 
+<//-----------------------------------Para-1----------------------------------------->
+
+      <div class="paragraphe">
+
+        <div class="content-paragraphe">
+          <?php
+          $req = $bdd->query('SELECT * FROM page WHERE id= 2');
+          $page = $req->fetchAll();
+          foreach ($page as $page):   ?>
+
+            <p><?= $page['content']?></p>
+
+          <?php endforeach ?>
+        </div>
+
+      </div>
+
+
+<//-----------------------------------parallax----------------------------------------->
+
+      <div id="slide1">
+
+      </div>
+
+<//-----------------------------------Para-2----------------------------------------->
+
+      <div class="paragraphe">
+
+        <div class="content-paragraphe">
+          <?php
+          $req = $bdd->query('SELECT * FROM page WHERE id= 3');
+          $page = $req->fetchAll();
+          foreach ($page as $page):   ?>
+
+            <p><?= $page['content']?></p>
+
+          <?php endforeach ?>
+        </div>
+
+      </div>
+
+<//-----------------------------------articles----------------------------------------->
     <div class="article-cont">
 
     <?php
@@ -40,8 +73,14 @@
       </div>
     <?php endforeach ?>
     </div>
-<//----------------------------------------------------footer------------------------------------------------------->
 
 
-  </body>
-</html>
+<//------------------------------------------------------------------------------------------------------------------->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="script/jquery.parallax-1.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('#slide1').parallax("center", 900, 0.1, true);
+      })
+    </script>
+<?php require_once"inc/footer.php" ?>

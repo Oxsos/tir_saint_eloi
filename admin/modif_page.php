@@ -4,7 +4,6 @@
 <//----------------------------------------------------Articles------------------------------------------------------->
 
     <?php
-    require_once '../inc/connect.php';
     require_once '../inc/fonction.php';
 
     $page = getPage($bdd,1, $_GET['id']);
@@ -26,7 +25,7 @@
           'content' => $_POST['content']
 
         ]);
-        $_SESSION['flash']['success'] = 'page modifier!';
+        header('location:acc_page.php');
       }else {
         $_SESSION['flash']['error'] = 'Champs manquants!';
       }
@@ -48,20 +47,13 @@
       <form method="post">
         <h2>Nom de la page:</h2>
         <input type="text" name="nom" value="<?= $page->nom ?>">
-
-        <h2>Contenu de la page:</h2>
-        <textarea cols="80" class="ckeditor" id="editeur" name="content" rows="10"><?= $page->content ?></textarea>
+        <br>
+        <h2>Contenue de la page:</h2>
+        <textarea id="newsContenu" name="content" class="CKeditor"><?= $page->content ?></textarea>
         <button>Modifier</button>
       </form>
     </div>
-<//----------------------------------------------------Modification Articles------------------------------------------------------->
-
-<div class="sup-page">
-  <center><a href="acc_page.php">Retour à la page précédente</a></center>
-</div>
 
 <//----------------------------------------------------footer------------------------------------------------------->
 
-
-   </body>
-</html>
+<?php require_once"inc/footer.php" ?>

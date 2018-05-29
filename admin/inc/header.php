@@ -7,25 +7,7 @@
     <meta http-equiv="content-type" content="text/html; charset utf-8">
     <title>Admin Tir saint Eloi</title>
     <link rel="stylesheet" href="../css/admin.css">
-    <script src="../inc/tinymce/tinymce.min.js"></script>
-
-    <script type="text/javascript">
-      tinymce.init({
-        selector: '#myTextarea',
-        theme: 'modern',
-        width: 1600,
-        height: 800,
-        subfolder:"",
-        plugins: [
-         "advlist autolink link image lists charmap print preview hr anchor pagebreak",
-         "searchreplace wordcount visualblocks visualchars code insertdatetime media nonbreaking",
-         "table contextmenu directionality emoticons paste textcolor filemanager"
-   ],
-   image_advtab: true,
-   toolbar: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect forecolor backcolor | link unlink anchor | image media | print preview code"
- });
-
-      </script>
+    <script src="inc/CKeditor/ckeditor.js"></script>
   </head>
 
 

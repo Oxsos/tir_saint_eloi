@@ -10,9 +10,6 @@
 $req = $bdd->query('SELECT * FROM `tireurs`');
 $tireurs = $req->fetchAll();
 
-$req = $bdd->query('SELECT * FROM page ORDER BY id DESC');
-$page = $req->fetchAll();
-
 foreach ($tireurs as $tireurs):   ?>
 
   <div class="pres-page">
