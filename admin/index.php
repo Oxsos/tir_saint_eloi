@@ -4,7 +4,7 @@
     <h2><center>Bienvenue </center></h2>
 
 <//---------------------------------Articles-------------------------->
-    <a href="creat_article.php">Ajouter un article</a><br>
+    <a href="add_article.php" class="button">Ajouter un article</a><br>
 
     <div class="article-cont">
 
@@ -16,12 +16,8 @@
 
       <div class="article">
 
-        <div class="img-article">
-          <img src="http://via.placeholder.com/350x150"><br>
-          <h3><?= $article['name']?></h3>
-        </div>
-
         <div class="content-article">
+          <center><h3><?= $article['name']?></h3></center>
           <?php echo substr($article['content'], 0, 400);
            ?>
           <br>
@@ -29,7 +25,7 @@
         </div>
 
         <div class="link-article">
-          <a href="gestion_article.php?id=<?= $article['id'] ?>">Voir l'article / le modifier</a>
+          <center><a href="gestion_article.php?id=<?= $article['id'] ?>" class="button">Voir l'article / le modifier</a></center>
         </div>
       </div>
     <?php endforeach ?>
@@ -39,6 +35,6 @@
 
     <//----------------------------------------------------footer------------------------------------------------------->
 
-        
+
        </body>
     </html>

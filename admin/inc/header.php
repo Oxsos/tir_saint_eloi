@@ -25,8 +25,7 @@
       <ul class="ul-navbar">
        <li class="li-navbar"><a href="index.php">Acceuil Administration</a></li>
        <li class="li-navbar"><a href="acc_page.php">Gestion des pages</a></li>
-       <li class="li-navbar"><a href="acc_membre.php">membres</a></li>
-       <li class="li-navbar"><a href="acc_comp.php">compétitions</a></li>
+       <li class="li-navbar"><a href="add_comp.php">Résultats compétitions</a></li>
        <li class="li-navbar"><a href="admin.php">Administateurs</a></li>
        <li class="li-navbar"><a href="deconnect.php">Déconnexion</a> </li>
 

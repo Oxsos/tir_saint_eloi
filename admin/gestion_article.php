@@ -12,18 +12,13 @@
     ?>
 
 
-    <div class="article">
+    <div class="gestion_article">
       <h1><?= $article->name ?></h1>
       <p><?= $article->content ?></p>
       <h5>Par: <?= $article->Autor ?></h5>
+      <a class="button" href="modif_article.php?id=<?= $article->id ?>">Modifier</a>
+      <a class="button" href="delete_article.php?id=<?= $article->id ?>">Supprimer</a>
     </div>
-<//----------------------------------------------------Modification Articles------------------------------------------------------->
-
-<div class="sup-article">
-  <a href="delete_article.php?id=<?= $article->id ?>">Supprimer</a>
-  <a href="modif_article.php?id=<?= $article->id ?>">Modifier</a>
-  <a href="index.php">Retour à la page principale</a>
-</div>
 
 <//----------------------------------------------------footer------------------------------------------------------->
 

@@ -20,6 +20,7 @@
           'Autor' => $_POST['Autor'],
         ]);
         $_SESSION['flash']['success'] = 'Article créé!';
+        header('location:index.php');
       }else {
         $_SESSION['flash']['error'] = 'Champs manquants!';
       }
@@ -38,13 +39,14 @@
           echo "<div class='error'>".$_SESSION['flash']['error']."</div>";
         }
       ?>
-      <form method="post" action="reception.php" enctype="multipart/form-data">
+      <form method="post" action="add_article.php" enctype="multipart/form-data">
         <h2>Nom de l'article:</h2>
         <input type="text" name="name">
         <h2>Auteur de l'article:</h2>
         <input type="text" name="Autor">
 
         <h2>Contenu de l'article:</h2>
+        <p>Pour que l'image ne soit pas déformée, après le téléchargment ou la sélection, supprimez les paramètres hauteur et largeur de la photo. (voir notice pour plus de détails)</p>
         <textarea id="newsContenu" name="content" class="CKeditor"></textarea>
         <button>Ajouter l'article</button>
       </form>

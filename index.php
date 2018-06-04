@@ -23,7 +23,7 @@
 
 <//-----------------------------------parallax----------------------------------------->
 
-      <div id="slide1">
+      <div class="parallax-1">
 
       </div>
 
@@ -43,10 +43,20 @@
         </div>
 
       </div>
+<//-----------------------------------bandeau----------------------------------------->
+
+      <img src="img/prestir.jpg" alt="" class="photo-band">
+
+
+<//-----------------------------------parallax----------------------------------------->
+
+    <div class="parallax-2">
+
+    </div>
 
 <//-----------------------------------articles----------------------------------------->
     <div class="article-cont">
-
+      <center><h1 class="titre">Articles</h1></center>
     <?php
     $req = $bdd->query('SELECT * FROM articles ORDER BY id DESC LIMIT 30');
     $article = $req->fetchAll();
@@ -55,26 +65,25 @@
 
       <div class="article">
 
-        <div class="img-article">
-          <img src="http://via.placeholder.com/350x150"><br>
-          <h3><?= $article['name']?></h3>
-        </div>
-
         <div class="content-article">
-          <?php echo substr($article['content'], 0, 400);
+          <center><h2><?= $article['name']?></h2></center>
+          <?php echo substr($article['content'], 0, 10000);
            ?>
+           <br>
           <br>
           Par: <?= $article['Autor'] ?>
         </div>
 
-        <div class="link-article">
-          <a href="gestion_article.php?id=<?= $article['id'] ?>">Voir l'article / le modifier</a>
-        </div>
       </div>
     <?php endforeach ?>
+    </div>
+<//-----------------------------------parallax----------------------------------------->
+
+    <div class="parallax-3">
+
     </div>
 
 
 <//------------------------------------------------------------------------------------------------------------------->
-    
+
 <?php require_once"inc/footer.php" ?>

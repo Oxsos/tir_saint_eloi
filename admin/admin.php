@@ -2,7 +2,10 @@
 <?php require_once"inc/header.php" ?>
 
 <//----------------------------------------------------admin------------------------------------------------------->
+<div class="sup-article">
+  <a class="button" href="add_admin.php">Ajouter un Admin</a><br>
 
+</div>
 <div class="admin-cont">
 
 <?php
@@ -18,7 +21,7 @@ foreach ($admin as $admin):   ?>
 
       <?php
       if ($_SESSION['admin']->id == 12 OR $_SESSION['admin']->id == 11) {?>
-        <li><a href="supp_admin.php?id=<?= $admin['id'] ?>">Supprimer</a></li>
+        <li><a class="button" href="supp_admin.php?id=<?= $admin['id'] ?>">Supprimer</a></li>
       <?php } ?>
 
 
@@ -29,10 +32,7 @@ foreach ($admin as $admin):   ?>
 
 <//----------------------------------------------------Modification admin------------------------------------------------------->
 
-<div class="sup-article">
-  <a href="add_admin.php">Ajouter un Admin</a><br>
 
-</div>
 
 
 <?php require_once"inc/footer.php" ?>

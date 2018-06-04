@@ -11,6 +11,7 @@ html, body{
 
 .header-img{
   position: relative;
+  margin-bottom: -1.5%
 }
 
 .bg-img{
@@ -27,30 +28,49 @@ html, body{
   top: 30%;
 }
 
+@media (max-width: 730px) {
+  .logo-img{
+    position: absolute;
+    width: 15%;
+    height: auto;
+    left: 43%;
+    top: 20%;
+  }
+}
+
+
 p, a{
   font-family: 'Raleway', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2{
   font-family: 'Anton', sans-serif;
 }
 
 
 /*-------------------------NAVBAR--------------------------------*/
 
-nav{
+.big-nav{
   position: relative;
   padding: 0;
   margin-top: -0.3%;
 }
 
 @media all and (max-width:1420px) and (min-width:730px) {
-  nav{
+  .big-nav{
     position: relative;
     padding: 0;
     margin-top: -1%;
   }
 }
+
+@media all and (max-width:730px) {
+  .big-nav{
+    display: none;
+  }
+}
+
+
 @media all and (max-width:730px) and (min-width:300px){
   nav{
     position: relative;
@@ -118,6 +138,108 @@ li.dropdown {
 }
 
 
+
+/*-------------------------SMART-NAVBAR--------------------------------*/
+@media (min-width: 730px) {
+  .navigation {
+    display: none;
+  }
+  .nav-button{
+    display: none;
+  }
+}
+
+
+@media (max-width: 730px) {
+  .navigation {
+    background: rgba(0,0,0,.5);
+  }
+  .navigation > a {
+    display: block;
+    padding: 1rem 1rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+  }
+  .niv2 {
+    text-align: right;
+  }
+  .navigation > a:hover,
+  .navigation > a:focus,
+  .navigation > a:active {
+    background: #555;
+  }
+
+  .nav-button {
+    display: none; /* no button by default */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1; /* will be above everything */
+    height: 2.4rem;
+    width: 2.8rem;
+    background-color: transparent;
+    background-image: linear-gradient(to right, currentColor, currentColor);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 5px;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-button::before,
+  .nav-button::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    display: block;
+    height: 5px;
+    background: currentColor;
+    transition: .25s;
+    transition-property: transform, top;
+    will-change: transform, top;
+  }
+  .nav-button::before {
+    top: 0;
+  }
+  .nav-button::after {
+    top: calc(100% - 4px);
+  }
+
+
+@media (max-width: 730px) {
+    .js-enabled html,
+    .js-enabled body {
+      overflow-x: hidden; /* you shall not pass! */
+    }
+    .js-enabled .nav-button {
+      display: inline-block;
+    }
+    .js-enabled .navigation {
+      position: absolute;
+      width: 60vw;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    /* styling opened nav */
+    .js-enabled .navigation {
+      transition: transform .25s;
+      will-change: transform;
+      transform: translateX(-100%);
+    }
+    .js-enabled .navigation.is-opened {
+      transform: translateX(0);
+    }
+  }
+}
+
+
 /*-------------------------FFTir--------------------------------*/
 
 .paragraphe{
@@ -136,24 +258,133 @@ li.dropdown {
 
 /*-------------------------PARALLAX--------------------------------*/
 
-#slide1{
+.parallax-1{
   width: 100%;
   height: 30%;
   background: url(../img/parallax.jpg) center 0 no-repeat fixed;
 }
 
+.parallax-2{
+  width: 100%;
+  height: 40%;
+  background: url(../img/parallax-2.jpg) center 0 no-repeat fixed;
+}
+
+.parallax-3{
+  width: 100%;
+  height: 20%;
+  background: url(../img/parallax-2.jpg) center 0 no-repeat fixed;
+}
+
+@media (max-width: 730px) {
+  .parallax-1{
+    width: 100%;
+    height: 30%;
+    background: url(../img/parallax.jpg) center 30 no-repeat;
+  }
+
+  .parallax-2{
+    width: 100%;
+    height: 40%;
+    background: url(../img/parallax-2.jpg) center 30 no-repeat;
+  }
+
+  .parallax-3{
+    width: 100%;
+    height: 20%;
+    background: url(../img/parallax-2.jpg) center 30 no-repeat;
+  }
+}
+
+/*-------------------------BANDEAU-PHOTO--------------------------------*/
 
 
-
+.photo-band{
+  width: 100%;
+  height: auto;
+  margin-bottom: 10%;
+}
 
 /*-------------------------ARTICLE--------------------------------*/
 
+.article-cont{
+  width: 80%;
+  height: auto;
+  margin: -15% 10% 5% 10%;
+}
+
+@media (max-width: 730px) {
+  .article-cont{
+    width: 90%;
+    height: auto;
+    margin: -60% 5% 5% 5%;
+  }
+}
+
+.titre{
+  text-shadow: #ffffff 1px 0 10px;
+}
+
+.article{
+  width: 100%;
+  height: auto;
+  margin: 1%;
+  background-color: white;
+}
+
+.content-article{
+  width: 80%;
+  height: auto;
+  padding: 5% 10% 5% 10%;
+}
+
+.article img{
+  height: auto;
+  max-width: 100%;
+}
+
+.page-article{
+  width: 80%;
+  height: auto;
+  margin:5%
+  background-color: white;
+}
+
+.article input{
+  height: auto;
+  max-width: 100%;
+}
 
 
 
+/*-------------------------PARTENAIRES--------------------------------*/
+
+.partenaire{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 5% 0 5% 0;
+}
+
+
+/*-------------------------FOOTER--------------------------------*/
+
+footer{
+  width: 100%;
+  height: auto;
+  padding: 1%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.mention{
+
+}
 
 
 
-
-
-/*-------------------------ARTICLE--------------------------------*/
+/*----------------------------------------------------------------*/

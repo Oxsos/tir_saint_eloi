@@ -2,7 +2,7 @@
 
 <//----------------------------------------------------content------------------------------------------------------->
 
-<a href="creat_comp.php">Ajouter une competition</a><br>
+<a href="add_comp.php">Ajouter une competition</a><br>
 
 <div class="tireur-cont">
 

@@ -49,46 +49,50 @@ if (!empty($_POST)) {
 
 <!--registration form-->
 
-<h1>S'inscrire</h1>
+<div class="form-admin">
 
-<?php if(!empty($errors)): ?>
-  <div class="alert alert-danger">
-    <p>Vous n'avez pas rempli le formulaire correctement</p>
-    <ul>
-      <?php foreach($errors as $error): ?>
-        <li><?php echo $error; ?></li>
-      <?php endforeach; ?>
-    </ul>
-  </div>
-<?php endif; ?>
+  <h1>Ajouter un administrateur</h1>
+
+  <?php if(!empty($errors)): ?>
+    <div class="alert alert-danger">
+      <p>Vous n'avez pas rempli le formulaire correctement</p>
+      <ul>
+        <?php foreach($errors as $error): ?>
+          <li><?php echo $error; ?></li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+  <?php endif; ?>
 
 
 
 
-<form action="" method="POST">
+  <form action="" method="POST">
 
-  <div class="form-group">
-    <label for="">Pseudo</label>
-    <input class="form-control" type="text" name="pseudo" required>
-  </div>
+    <div class="form-group">
+      <label for="">Pseudo</label>
+      <input class="form-control" type="text" name="pseudo" required>
+    </div>
 
-  <div class="form-group">
-    <label for="">Email</label>
-    <input class="form-control" type="text" name="email" required>
-  </div>
+    <div class="form-group">
+      <label for="">Email</label>
+      <input class="form-control" type="text" name="email" required>
+    </div>
 
-  <div class="form-group">
-    <label for="">Mot de passe</label>
-    <input class="form-control" type="password" name="pass" required>
-  </div>
+    <div class="form-group">
+      <label for="">Mot de passe</label>
+      <input class="form-control" type="password" name="pass" required>
+    </div>
 
-  <div class="form-group">
-    <label for="">Confirmer le mot de passe</label>
-    <input class="form-control" type="password" name="password_confirm" required>
-  </div>
+    <div class="form-group">
+      <label for="">Confirmer le mot de passe</label>
+      <input class="form-control" type="password" name="password_confirm" required>
+    </div>
 
-  <button type="submit" class="btn btn-primary"> S'inscrire </button>
-</form>
+    <button type="submit"  class="button"> Ajouter </button>
+  </form>
+
+</div>
 
 
 <//----------------------------------------------------footer------------------------------------------------------->

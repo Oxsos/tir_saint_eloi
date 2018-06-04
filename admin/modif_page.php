@@ -34,7 +34,7 @@
     ?>
 
 
-    <div class="modif-page">
+    <div class="modif-article">
       <h1>Modifier la page: <?= $page->nom ?></h1>
       <?php
         if (isset($_SESSION['flash']['success'])) {
@@ -45,12 +45,11 @@
         }
       ?>
       <form method="post">
-        <h2>Nom de la page:</h2>
-        <input type="text" name="nom" value="<?= $page->nom ?>">
-        <br>
+        <h2>Nom de la page:
+        <input type="text" name="nom" value="<?= $page->nom ?>"></h2>
         <h2>Contenue de la page:</h2>
         <textarea id="newsContenu" name="content" class="CKeditor"><?= $page->content ?></textarea>
-        <button>Modifier</button>
+        <button class="button">Modifier</button>
       </form>
     </div>
 

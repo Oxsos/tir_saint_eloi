@@ -3,7 +3,7 @@
 
 <//---------------------------------Articles-------------------------->
 
-    <div class="article-cont">
+    <div class="page-cont">
 
     <?php
     $req = $bdd->query('SELECT * FROM page ORDER BY id DESC');
@@ -14,12 +14,12 @@
       <div class="pres-page">
 
         <div class="content-page">
-          <h2><?= $page['nom'] ?></h2><br>
-          <?php echo substr($page['content'], 0, 400);?>
+          <center><h2><?= $page['nom'] ?></h2><br></center>
+
         </div>
 
-        <div class="link-article">
-          <a href="modif_page.php?id=<?= $page['id'] ?>">Voir la page / la modifier</a>
+        <div class="link-page">
+          <a class="button" href="modif_page.php?id=<?= $page['id'] ?>">Voir la page / la modifier</a>
         </div>
       </div>
     <?php endforeach ?>

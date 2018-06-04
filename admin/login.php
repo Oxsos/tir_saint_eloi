@@ -12,7 +12,7 @@
 
   <body>
     <?php require_once '../inc/connect.php' ?>
-    <div class="container">
+    <div class="connect-form">
 
 
 <//---------------------------------connection de l'administation---------------->
@@ -38,24 +38,21 @@
 
 
 <//--------------------------------- formulaire de connection à l'administation---------------->
-      <h1>Se connecter</h1>
 
+        <center><h1>Connection:</h1></center>
 
-      <form action="" method="POST">
-
-        <div class="form-group">
-            <label for="">Pseudo ou email</label>
-            <input class="form-control" type="text" name="pseudo" required>
-          </div>
-
+        <form action="" method="POST">
           <div class="form-group">
-            <label for="">Mot de passe </label>
-              <input class="form-control" type="password" name="pass" required>
-          </div>
-
-
-      <button type="submit" class="btn btn-primary"> Se connecter </button>
-      </form>
+              <center><label for="">Pseudo ou email</label></center>
+              <center><input class="form-control" type="text" name="pseudo" required></center>
+            </div>
+            <div class="form-group">
+              <center><label for="">Mot de passe </label></center>
+              <center><input class="form-control" type="password" name="pass" required></center>
+            </div>
+            <br>
+        <center><button type="submit" class="button"> Se connecter </button></center>
+        </form>
 
     </div>
 
