@@ -17,7 +17,7 @@
       <p><?= $article->content ?></p>
       <h5>Par: <?= $article->Autor ?></h5>
       <a class="button" href="modif_article.php?id=<?= $article->id ?>">Modifier</a>
-      <a class="button" href="delete_article.php?id=<?= $article->id ?>">Supprimer</a>
+      <a class="button" onclick="return confirm('Voulez-vous vraiment supprimer cette article?');" href="delete_article.php?id=<?= $article->id ?>">Supprimer</a>
     </div>
 
 <//----------------------------------------------------footer------------------------------------------------------->

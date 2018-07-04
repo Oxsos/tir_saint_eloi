@@ -29,6 +29,7 @@ function getArticle($bdd, $nb = null, $id = null){
    }
    return $page;
  }
+ 
 
  function getTireurs($bdd, $nb = null, $id = null){
    if ($nb AND !$id) {

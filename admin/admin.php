@@ -3,8 +3,10 @@
 
 <//----------------------------------------------------admin------------------------------------------------------->
 <div class="sup-article">
+  <?php
+  if ($_SESSION['admin']->id == 12 OR $_SESSION['admin']->id == 11) {?>
   <a class="button" href="add_admin.php">Ajouter un Admin</a><br>
-
+  <?php } ?>
 </div>
 <div class="admin-cont">
 

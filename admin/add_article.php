@@ -51,11 +51,6 @@
         <button>Ajouter l'article</button>
       </form>
     </div>
-<//----------------------------------------------------Modification Articles------------------------------------------------------->
-
-<div class="sup-article">
-  <a href="index.php">Retour à la page précédente</a>
-</div>
 
 
 

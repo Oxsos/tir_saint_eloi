@@ -14,22 +14,22 @@
 
     foreach ($article as $article):   ?>
 
-      <div class="article">
+      <div class="pres-article">
 
         <div class="content-article">
-          <center><h3><?= $article['name']?></h3></center>
-          <?php echo substr($article['content'], 0, 400);
-           ?>
+          <center><h2><?= $article['name'] ?></h2><br></center>
+          <?php echo substr($article['content'], 0, 300); ?>
           <br>
-          Par: <?= $article['Autor'] ?>
+          <h3>Par: <?= $article['Autor'] ?></h3>
         </div>
 
         <div class="link-article">
-          <center><a href="gestion_article.php?id=<?= $article['id'] ?>" class="button">Voir l'article / le modifier</a></center>
+          <a href="gestion_article.php?id=<?= $article['id'] ?>" class="button">Voir l'article / le modifier</a></center>
         </div>
       </div>
     <?php endforeach ?>
     </div>
+
 
 
 

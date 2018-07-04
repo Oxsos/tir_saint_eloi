@@ -23,8 +23,9 @@
 
     <nav>
       <ul class="ul-navbar">
-       <li class="li-navbar"><a href="index.php">Acceuil Administration</a></li>
+       <li class="li-navbar"><a href="index.php">Gestion des articles</a></li>
        <li class="li-navbar"><a href="acc_page.php">Gestion des pages</a></li>
+       <li class="li-navbar"><a href="gestion-photo.php">Gestion des photos</a></li>
        <li class="li-navbar"><a href="add_comp.php">Résultats compétitions</a></li>
        <li class="li-navbar"><a href="admin.php">Administateurs</a></li>
        <li class="li-navbar"><a href="deconnect.php">Déconnexion</a> </li>

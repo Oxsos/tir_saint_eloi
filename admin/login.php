@@ -17,6 +17,7 @@
 
 <//---------------------------------connection de l'administation---------------->
         <?php
+
         if(!empty($_POST) && !empty($_POST['pseudo']) && !empty($_POST['pass'])) {
           require_once '../inc/connect.php';
           $req = $bdd->prepare('SELECT * FROM admin WHERE (pseudo = :pseudo OR email = :pseudo)');
@@ -39,7 +40,7 @@
 
 <//--------------------------------- formulaire de connection à l'administation---------------->
 
-        <center><h1>Connection:</h1></center>
+        <center><h1>Connexion:</h1></center>
 
         <form action="" method="POST">
           <div class="form-group">

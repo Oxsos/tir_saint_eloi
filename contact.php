@@ -3,11 +3,7 @@
 <//----------------------------------------------------CONTENT------------------------------------------------------->
 
 
-<//-----------------------------------parallax----------------------------------------->
 
-      <div class="parallax-1">
-
-      </div>
 
 <//-----------------------------------contenue----------------------------------------->
 
@@ -16,7 +12,7 @@
 
         <div class="content-paragraphe">
           <?php
-          $req = $bdd->query('SELECT * FROM page WHERE id= 1');
+          $req = $bdd->query('SELECT * FROM page WHERE id= 13');
           $page = $req->fetchAll();
           foreach ($page as $page):   ?>
 
@@ -25,6 +21,11 @@
           <?php endforeach ?>
         </div>
 
+      </div>
+
+<//-----------------------------------parallax----------------------------------------->
+
+      <div class="parallax-1">
       </div>
 
 

@@ -15,8 +15,8 @@ if (!$_SESSION['admin']) {
 if (!empty($_POST)) {
   $errors = array();
 
+  //verification pseudo
   if (!empty($_POST['pseudo'])) {
-
     $req = $bdd->prepare('SELECT id FROM admin WHERE pseudo = ?');
     $req->execute([$_POST['pseudo']]);
     $user = $req->fetch();
@@ -24,15 +24,17 @@ if (!empty($_POST)) {
       $errors['pseudo'] = 'Ce pseudo est déjà pris';
     }
   }
+  //verification email
   if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
     $errors['email'] = "Votre email n'est pas valide !";
   }
 
+  //verification mot de passe
   if (empty($_POST['pass']) || $_POST['pass'] != $_POST['password_confirm']) {
     $errors['pass'] = "Mot de passe invalide !";
   }
 
-  //insert into database
+  //insertion dans la BDD
   if (empty($errors)) {
     $req = $bdd->prepare("INSERT INTO admin SET pseudo = ?, pass = ?, email = ?");
     $pass = password_hash($_POST['pass'], PASSWORD_BCRYPT);

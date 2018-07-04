@@ -9,7 +9,8 @@ html, body{
       rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)
     ),
-    url(../img/parallax-2.jpg);
+    url(../img/parallax-2.jpg) fixed;
+  background-size: cover;
 }
 /*---------------------------------Button-----------------------------*/
 
@@ -24,6 +25,7 @@ html, body{
     font-size: 16px;
     margin: 1%;
 }
+
 
 /*---------------------------------Navbar-----------------------------*/
 .ul-navbar {
@@ -56,35 +58,37 @@ html, body{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: 19.6%;
   width: 80%;
   height: auto;
-  margin-left: 10%;
 }
 
-.article{
-  width: 48%;
+.pres-article{
+  width: 20%;
   height: auto;
-  margin: 1%;
-  background-color: white;
-}
-
-.page-article{
-  width: 80%;
-  height: auto;
-  margin-left: 10%;
+  position: relative;
+  padding: 2%;
+  margin: 0.5%;
+  border: 1px solid black;
   background-color: white;
 }
 
 .content-article{
-  width: 100%;
-  height: auto;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .content-article img{
-  width: 100%;
-  height: auto;
+  display: none;
 }
+
+
+.link-article{
+  text-align: center;
+}
+
 
 /*---------------------------------Gestion-articles-----------------------------*/
 
@@ -207,12 +211,52 @@ html, body{
   text-align: center;
 }
 
+/*---------------------------------Upload-----------------------------*/
+.upload{
+  text-align: center;
+}
 
+.affichage-pdf{
+  text-align: center;
+}
 
+.affichage-pdf li{
+  list-style: none;
+}
 
+/*---------------------------------suppression-pdf-----------------------------*/
+.suppression-pdf{
+  text-align: center;
+  padding: 3%;
+}
 
+/*---------------------------------suppression-photo-----------------------------*/
+.gestion-photo{
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+}
 
+.visuel-photo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
+.visuel-photo li{
+  list-style: none;
+  text-align: center;
+  padding: 2%;
+}
+
+.gestion-photo img{
+  max-width: 200px;
+  height: auto;
+}
+
+.suppression-photo{
+  text-align: center;
+}
 
 
 
